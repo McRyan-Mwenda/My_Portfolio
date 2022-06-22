@@ -1,0 +1,62 @@
+<!-- inherit template -->
+{% extends 'base.html' %}
+<!-- inherit template -->
+
+<!-- load static -->
+{% load static %}
+<!-- load static -->
+
+<!-- title -->
+
+<!-- extend title block -->
+{% block title %} Testimonials {% endblock %}
+<!-- extend title block -->
+
+<!-- title -->
+
+<!-- body -->
+
+<!-- extend body block -->
+{% block body %}
+<!--  -->
+<div class="parent container is-fluid">
+  <div class="testimonials-container">
+    <!-- if -->
+    {% if kind_words %}
+    <!-- if -->
+
+    <!-- for -->
+    {% for words in kind_words %}
+    <!-- for -->
+
+    <article class="all-comments message is-dark">
+      <div class="message-body">
+        <p class="is-size-5">"{{ words.comments }}"</p>
+        <br />
+        <p><i class="bi bi-arrow-right-short"></i> {{ words.person }}</p>
+        <p><i class="bi bi-arrow-right-short"></i> {{ words.description }}</p>
+      </div>
+    </article>
+
+    <!-- endfor -->
+    {% endfor %}
+    <!-- for -->
+
+    <!-- else -->
+    {% else %}
+    <!-- else -->
+
+    <p class="title has-text-light has-text-centered">
+      No testimonials have been posted yet.
+    </p>
+
+    <!-- endif -->
+    {% endif %}
+    <!-- endif -->
+  </div>
+</div>
+<!--  -->
+{% endblock %}
+<!-- extend body block -->
+
+<!-- body -->

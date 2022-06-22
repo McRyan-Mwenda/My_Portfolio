@@ -1,0 +1,155 @@
+<!-- static -->
+{% load static %}
+<!-- static -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--  -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--  -->
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="{% static 'img/Macryan.ico' %}"
+      type="image/x-icon"
+    />
+    <!-- favicon -->
+
+    <!-- CDNs -->
+
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
+      integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap icons -->
+
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <!-- JQuery -->
+
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Animate.css -->
+
+    <!-- CDNs -->
+
+    <!-- local css -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <!-- local css -->
+
+    <!-- title -->
+    <title>Mac'Ryan | {% block title %} {% endblock %}</title>
+    <!-- title -->
+  </head>
+  <body>
+    <!-- navigation -->
+    <div class="container is-fluid nav-body" id="top">
+      <nav class="level">
+        <div class="level-item has-text-centered">
+          <a href="{% url 'all_articles' %}" class="nav-links has-text-primary"
+            ><i class="bi bi-file-earmark-richtext is-size-5"></i> Blog</a
+          >
+        </div>
+        <div class="level-item has-text-centered">
+          <a href="{% url 'testimonials' %}" class="nav-links has-text-primary"
+            ><i class="bi bi-chat-left-quote is-size-5"></i> Testimonials</a
+          >
+        </div>
+        <div class="level-item navbar-brand has-text-centered">
+          <a
+            href="{% url 'home' %}"
+            class="logo subtitle is-size-2 has-text-warning-light"
+            >Mac'Ryan Mwenda</a
+          >
+        </div>
+        <div class="level-item has-text-centered">
+          <a
+            href="{% url 'about_me' %}"
+            class="nav-links has-text-primary is-align-self-center"
+            ><i class="bi bi-person-bounding-box is-size-5"></i> About</a
+          >
+        </div>
+        <div class="level-item has-text-centered">
+          <a href="{% url 'contact' %}" class="nav-links has-text-primary"
+            ><i class="bi bi-telephone-outbound is-size-5"></i> Contact</a
+          >
+        </div>
+      </nav>
+    </div>
+    <!-- navigation -->
+
+    <!-- nav and body divider -->
+    <div class="container is-fluid">
+      <hr class="divider-top" />
+    </div>
+    <!-- nav and body divider -->
+
+    <!-- main body -->
+    <div class="main-body container is-fluid">
+      {% block body %}
+      <!--  -->
+      {% endblock %}
+    </div>
+    <!-- main body -->
+
+    <!-- footer and body divider -->
+    <div class="container is-fluid">
+      <hr class="divider-bottom" />
+    </div>
+    <!-- footer and body divider -->
+
+    <!-- footer -->
+    <div class="footer-body container is-fluid">
+      <div class="level container is-fluid">
+        <div class="level-left">
+          <p class="level-item">
+            Check out my projects on...
+            <a
+              href="https://docs.google.com/presentation/d/1tX836AYHbOcExnzXLJ8_8mwX1VTOCaV0/edit?usp=sharing&ouid=114455874775258705272&rtpof=true&sd=true"
+              class="links has-text-primary"
+              >G Drive</a
+            >
+          </p>
+        </div>
+        <div class="level-right">
+          <p class="level-item has-text-centered">
+            &#169; 2022 Mac'Ryan Mwenda.
+          </p>
+          <p class="level-item has-text-centered normal-font">|</p>
+          <a
+            href="https://twitter.com/mcryan_mwenda"
+            class="level-item has-text-centered has-text-info"
+            ><i class="bi bi-twitter"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/mcryanmwenda/"
+            class="level-item has-text-centered has-text-primary"
+            ><i class="bi bi-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+
+    <!-- messages section -->
+    {% include 'messages.html' %}
+    <!-- messages section -->
+  </body>
+  <!-- local js -->
+  <script src="{% static 'js/main.js' %}"></script>
+  <!-- local js -->
+</html>

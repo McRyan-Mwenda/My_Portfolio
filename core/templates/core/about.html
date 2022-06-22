@@ -1,0 +1,245 @@
+<!-- inherit template -->
+{% extends 'base.html' %}
+<!-- inherit template -->
+
+<!-- load static -->
+{% load static %}
+<!-- load static -->
+
+<!-- title -->
+
+<!-- extend title block -->
+{% block title %} About {% endblock %}
+<!-- extend title block -->
+
+<!-- title -->
+
+<!-- body -->
+
+<!-- extend body block -->
+{% block body %}
+<!--  -->
+<div class="parent container is-fluid">
+  <!--  -->
+
+  <!-- intro -->
+  <div class="intro">
+    <div class="intro-image">
+      <!-- slider section -->
+      {% include 'slider.html' %}
+      <!-- slider section -->
+    </div>
+    <div class="intro-caption">
+      <p class="title has-text-danger is-size-1">Mac'Ryan Mwenda</p>
+      <p class="subtitle has-text-warning is-size6 is-italic">
+        But you can call me Ryan
+      </p>
+      <p class="has-text-light is-size-5">
+        I'm a 3D artist, front-end software developer, entrepreneur and brand
+        builder who loves fresh ideas, ambitious challenges, fast-paced startups
+        and energizing conversations.
+      </p>
+      <br />
+      <a
+        href="https://res.cloudinary.com/dvx3xe8vi/image/upload/v1651479515/Docs/Curriculum_Vitae_j9hbe5.pdf"
+        class="has-text-dark button is-primary"
+        >My resume</a
+      >
+    </div>
+  </div>
+  <!-- intro -->
+
+  <!-- section -->
+  <hr class="divider-separator" />
+  <!-- section -->
+
+  <!-- about Loisa details -->
+  <div class="about-container">
+    <div class="me-personally is-size-5">
+      <p class="subtitle has-text-warning is-size-3">Who am I?</p>
+      <p class="about-content is-size-5">
+        I'm a 3D animator profiecient in modeling, surfacing, lighting, and
+        animation of 3D scenes. My software of choice is Blender 3D. Its
+        advantageous in working on stories using a pipeline way of working. I am
+        a person who thrives off a challenge. I'm a social butterfly who loves
+        people and building meaningful connections. I'm a leader, a doer and a
+        life-long learner.
+
+        <br />
+        <br />
+
+        I'm strategic and tactical, a visionary who loves the details, creative,
+        yet practical. I care about tangible results and exceptional work.
+
+        <br />
+        <br />
+
+        People often describe me as: authentic, driven and passionate. Which
+        pretty much means that I really care.
+      </p>
+
+      <br />
+
+      <p>
+        Want to work with me?
+        <a href="{% url 'contact' %}" class="has-text-info is-underlined"
+          >Get in touch!</a
+        >
+      </p>
+
+      <br />
+
+      <p class="subtitle has-text-warning is-size-3">My journey</p>
+      <p>
+        Throughout my life, I thought my path was already drawn out. But life
+        has an interesting way of taking you to places you have never thought of
+        going, paths you never thought you would walk, passions discovered
+        through mere experimentations. It is through these unexpected ventures
+        that I realized I had a passion for 3D animations after being introduced
+        to a Autodesk Maya tutorial by a friend.
+
+        <br />
+        <br />
+
+        Given my new found passion, the next logical step for me was to join
+        university and pursue a course which would allow me to learn more about
+        3D animation as a hobby while pursuing a course in Information
+        Technology. I joined the Jomo Kenyatta University of Agriculture and
+        Technology and later on, Mount Kenya University; while I was learning, I
+        found a passion in 3D animation and I am in the process of making it my
+        career.
+
+        <br />
+        <br />
+
+        While it has been quite exhausting journey, I have learnt so much and I
+        am becoming more confident in my skills. I have also been fortunate
+        enough to get help and mentorship from a very good counsellor. With her
+        assistance I rediscovered my passion for 3D artsistry and I am able to
+        develop clarity of where I am at the moment and where I wanted to be in
+        future.
+
+        <br />
+        <br />
+
+        One of the things that has become apparent to me throughout this
+        journey, is that if you have a dream and make achieving your dream your
+        top priority, nothing will stand in your way.
+
+        <br />
+        <br />
+
+        Today, I am a confident 3D artsist, an entrepreneur and a pretty good
+        writer – however my journey of self-development and self-improvement
+        doesn't stop there, it is a journey I shall continue embarking on in all
+        dimensions of my professional, personal, and inter-personal life.
+      </p>
+    </div>
+    <div class="my-skills">
+      <p class="subtitle has-text-warning is-size-3">
+        Personal & Inter-personal skills
+      </p>
+      <!--  -->
+      <p class="is-size-5">Active listening</p>
+      <progress class="progress is-primary" value="77" max="100">77%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Communication & Ideation</p>
+      <progress class="progress is-primary" value="71" max="100">71%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Teamwork & Leadership</p>
+      <progress class="progress is-primary" value="72" max="100">72%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Dependability & Responsibility</p>
+      <progress class="progress is-primary" value="76" max="100">76%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Motivation</p>
+      <progress class="progress is-primary" value="73" max="100">73%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Flexibility</p>
+      <progress class="progress is-primary" value="75" max="100">75%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Patience</p>
+      <progress class="progress is-primary" value="74" max="100">74%</progress>
+      <!--  -->
+      <br />
+      <p class="subtitle has-text-warning is-size-3">
+        Technical & Professional skills
+      </p>
+      <!--  -->
+      <p class="is-size-5">Blender 3D</p>
+      <progress class="progress is-danger" value="75" max="100">75%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Autodesk Maya</p>
+      <progress class="progress is-danger" value="72" max="100">72%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Python</p>
+      <progress class="progress is-info" value="70" max="100">70%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Modeling</p>
+      <progress class="progress is-info" value="75" max="100">75%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Surfacing/Texturing</p>
+      <progress class="progress is-info" value="73" max="100">73%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Lighting</p>
+      <progress class="progress is-info" value="68" max="100">68%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Animation</p>
+      <progress class="progress is-info" value="78" max="100">78%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Technical writing & documentation</p>
+      <progress class="progress is-dark" value="68" max="100">58%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">OS Proficiency (Windows & Linux)</p>
+      <progress class="progress is-dark" value="76" max="100">76%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Compositing</p>
+      <progress class="progress is-dark" value="70" max="100">70%</progress>
+      <!--  -->
+    </div>
+  </div>
+  <!-- about Loisa details -->
+
+  <!-- section -->
+  <!-- <hr class="divider-separator" /> -->
+  <!-- section -->
+
+  <!-- education and experience -->
+
+  <!-- education and experience -->
+</div>
+<!--  -->
+{% endblock %}
+<!-- extend body block -->
+
+<!-- body -->

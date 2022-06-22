@@ -1,0 +1,102 @@
+<!-- inherit template -->
+{% extends 'base.html' %}
+<!-- inherit template -->
+
+<!-- load static -->
+{% load static %}
+<!-- load static -->
+
+<!-- title -->
+
+<!-- extend title block -->
+{% block title %} Articles {% endblock %}
+<!-- extend title block -->
+
+<!-- title -->
+
+<!-- body -->
+
+<!-- extend body block -->
+{% block body %}
+<!--  -->
+<div class="parent container is-fluid">
+  <!--  -->
+  <div class="this-article-container">
+    <!--  -->
+
+    <!-- if -->
+    {% if article %}
+    <!-- if -->
+
+    <div class="article-in-detail">
+      <!--  -->
+      <div class="article-intro has-text-centered">
+        <p class="title has-text-warning">{{ article.title }}</p>
+        <p class="subtitle has-text-light is-size-5">
+          {{ article.meta_description }}
+        </p>
+      </div>
+
+      <!-- section -->
+      <hr class="divider-separator" />
+      <!-- section -->
+
+      <div class="article-content card">
+        <div class="card-image">
+          <figure class="image is-2by1">
+            <img
+              src="{{ article.thumbnail.url }}"
+              alt="{{ article.subtitle }}"
+            />
+          </figure>
+        </div>
+        <div class="card-content">{{ article.content|safe }}</div>
+      </div>
+
+      <!-- section -->
+      <hr class="divider-separator" />
+      <!-- section -->
+
+      <div class="level">
+        <div class="level-left">
+          <p class="has-text-light level-item">
+            <small> {{ article.date_published }} </small>
+          </p>
+        </div>
+        <div class="level-right">
+          <!-- for -->
+          {% for tag in article.tags.all %}
+          <!-- for -->
+
+          <p class="has-text-light level-item">
+            <small> |{{ tag }}| </small>
+          </p>
+
+          <!-- endfor -->
+          {% endfor %}
+          <!-- endfor -->
+        </div>
+      </div>
+
+      <!--  -->
+    </div>
+
+    <!-- else -->
+    {% else %}
+    <!-- else -->
+
+    <p class="title has-text-light has-text-centered">Something went wrong!</p>
+
+    <!-- endif -->
+    {% endif %}
+    <!-- endif -->
+
+    <!--  -->
+  </div>
+  <!--  -->
+</div>
+<!--  -->
+{% endblock %}
+<!-- extend body block -->
+
+<!-- body -->

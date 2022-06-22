@@ -1,0 +1,184 @@
+<!-- inherit template -->
+{% extends 'base.html' %}
+<!-- inherit template -->
+
+<!-- load static -->
+{% load static %}
+<!-- load static -->
+
+<!-- title -->
+
+<!-- extend title block -->
+{% block title %} Home {% endblock %}
+<!-- extend title block -->
+
+<!-- title -->
+
+<!-- body -->
+
+<!-- extend body block -->
+{% block body %}
+<!--  -->
+<div class="parent container is-fluid">
+  <!-- intro -->
+  <div class="intro">
+    <div class="intro-caption">
+      <p class="title has-text-danger is-size-1">Hello! I'm Mac'Ryan</p>
+      <p class="has-text-light is-size-3">
+        A tenacious, passionate, 3D artist who loves turning bold ideas into
+        impactful and memorable experiences through software.
+      </p>
+      <br />
+      <a href="{% url 'about_me' %}" class="has-text-dark button is-primary"
+        >Curious to know more?</a
+      >
+    </div>
+    <div class="intro-image">
+      <!-- slider section -->
+      {% include 'slider.html' %}
+      <!-- slider section -->
+    </div>
+  </div>
+  <!-- intro -->
+
+  <!-- section -->
+  <hr class="divider-separator" />
+  <!-- section -->
+
+  <div class="level container is-fluid">
+    <div class="level-left">
+      <p
+        class="title has-text-warning is-align-self-center level-item"
+        id="portfolio-section"
+      >
+        Portfolio
+      </p>
+    </div>
+    <div class="level-right">
+      <!--  -->
+      <div class="tabs is-centered is-align-self-center level-item">
+        <ul>
+          <li class="is-active" id="wp-tab">
+            <a class="has-text-light" id="wp-button">
+              <span>Freelance/Work Projects</span>
+            </a>
+          </li>
+          <li id="pp-tab">
+            <a class="has-text-light" id="pp-button">
+              <span>Personal Projects</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!--  -->
+    </div>
+  </div>
+
+  <!-- section -->
+  <hr class="divider-separator" />
+  <!-- section -->
+
+  <!-- portfolio section -->
+  <div class="portfolio-container">
+    <div class="work-portfolio" id="wp">
+      <!-- if -->
+      {% if work_projects %}
+      <!-- if -->
+
+      <div class="portfolio container is-fluid">
+        <!-- for -->
+        {% for project in work_projects %}
+        <!-- for -->
+
+        <div class="portfolio-item">
+          <div class="portfolio-card card">
+            <div class="card-image">
+              <figure class="image is-256x256">
+                <a
+                  href="{% url 'this_project' project.slug %}"
+                  class="has-text-info is-size-4 has-text-centered"
+                  ><img src="{{ project.image_context.url }}" alt=""
+                /></a>
+              </figure>
+            </div>
+          </div>
+          <!--  -->
+          <a
+            href="{% url 'this_project' project.slug %}"
+            class="has-text-info is-size-4 has-text-centered"
+            >{{ project.project_name }}</a
+          >
+        </div>
+
+        <!-- endfor -->
+        {% endfor %}
+        <!-- endfor -->
+      </div>
+
+      <!-- else -->
+      {% else %}
+      <!-- else -->
+
+      <p class="title has-text-light has-text-centered">
+        No work projects have been added yet.
+      </p>
+
+      <!-- endif -->
+      {% endif %}
+      <!-- endif -->
+    </div>
+    <div class="personal-portfolio" id="pp">
+      <!-- if -->
+      {% if personal_projects %}
+      <!-- if -->
+
+      <div class="portfolio container is-fluid">
+        <!-- for -->
+        {% for project in personal_projects %}
+        <!-- for -->
+
+        <div class="portfolio-item">
+          <div class="portfolio-card card">
+            <div class="card-image">
+              <figure class="image is-256x256">
+                <a
+                  href="{% url 'this_project' project.slug %}"
+                  class="has-text-info is-size-4 has-text-centered"
+                  ><img src="{{ project.image_context.url }}" alt=""
+                /></a>
+              </figure>
+            </div>
+          </div>
+          <!--  -->
+          <a
+            href="{% url 'this_project' project.slug %}"
+            class="has-text-info is-size-4 has-text-centered"
+            >{{ project.project_name }}</a
+          >
+        </div>
+
+        <!-- endfor -->
+        {% endfor %}
+        <!-- endfor -->
+      </div>
+
+      <!-- else -->
+      {% else %}
+      <!-- else -->
+
+      <p class="title has-text-light has-text-centered">
+        No personal projects have been added yet.
+      </p>
+
+      <!-- endif -->
+      {% endif %}
+      <!-- endif -->
+    </div>
+  </div>
+  <!-- portfolio section -->
+</div>
+<!--  -->
+{% endblock %}
+<!-- extend body block -->
+
+<!-- body -->

@@ -1,0 +1,75 @@
+<!-- inherit template -->
+{% extends 'base.html' %}
+<!-- inherit template -->
+
+<!-- load static -->
+{% load static %}
+<!-- load static -->
+
+<!-- title -->
+
+<!-- extend title block -->
+{% block title %} Articles {% endblock %}
+<!-- extend title block -->
+
+<!-- title -->
+
+<!-- body -->
+
+<!-- extend body block -->
+{% block body %}
+<!--  -->
+<div class="parent container is-fluid">
+  <div class="articles-container">
+    <!--  -->
+    <div class="article-intro has-text-centered">
+      <p class="subtitle has-text-warning is-size-5">
+        Articles to engage your mind, keep you motivated, to-dos, and much more.
+      </p>
+    </div>
+
+    <!-- section -->
+    <br />
+    <!-- section -->
+
+    <div class="all-articles has-text-centered">
+      <!-- if -->
+      {% if articles %}
+      <!-- if -->
+
+      <!-- for -->
+      {% for article in articles %}
+      <!-- for -->
+
+      <a
+        href="{% url 'this_article' article.slug %}"
+        class="title has-text-info is-size-3"
+      >
+        {{ article.title }}
+      </a>
+      <p class="has-text-gray">{{ article.date_published }}</p>
+      <br />
+      <!-- endfor -->
+      {% endfor %}
+      <!-- endfor -->
+
+      <!-- else -->
+      {% else %}
+      <!-- else -->
+
+      <p class="title has-text-light has-text-centered">
+        No articles have been posted yet.
+      </p>
+
+      <!-- endif -->
+      {% endif %}
+      <!-- endif -->
+    </div>
+    <!--  -->
+  </div>
+</div>
+<!--  -->
+{% endblock %}
+<!-- extend body block -->
+
+<!-- body -->

@@ -1,0 +1,48 @@
+<!-- if -->
+{% if messages %}
+<!-- if -->
+
+<!-- for -->
+{% for message in messages %}
+<!-- for -->
+
+<!-- if -->
+{% if message.tags == 'success' %}
+<!-- if -->
+<div class="app-message has-text-dark notification is-success">
+  <button class="delete"></button>
+  {{ message }}
+</div>
+<!-- elif -->
+{% elif message.tags == 'error' %}
+<!-- elif -->
+<div class="app-message has-text-dark notification is-danger">
+  <button class="delete"></button>
+  {{ message }}
+</div>
+<!-- elif -->
+{% elif message.tags == 'info' %}
+<!-- elif -->
+<div class="app-message has-text-dark notification is-info">
+  <button class="delete"></button>
+  {{ message }}
+</div>
+<!-- endif -->
+{% endif %}
+<!-- endif -->
+
+<!-- endfor -->
+{% endfor %}
+<!-- endfor -->
+
+<!-- endif -->
+{% endif %}
+<!-- endif -->
+
+<script>
+  $(document).ready(function () {
+    $(".delete").click(function () {
+      $(".app-message").remove();
+    });
+  });
+</script>

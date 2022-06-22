@@ -1,0 +1,153 @@
+<!-- inherit template -->
+{% extends 'base.html' %}
+<!-- inherit template -->
+
+<!-- load static -->
+{% load static %}
+<!-- load static -->
+
+<!-- title -->
+
+<!-- extend title block -->
+{% block title %} Projects {% endblock %}
+<!-- extend title block -->
+
+<!-- title -->
+
+<!-- body -->
+
+<!-- extend body block -->
+{% block body %}
+<!--  -->
+<div class="parent container is-fluid">
+  <!--  -->
+  <div class="this-article-container">
+    <!--  -->
+
+    <!-- if -->
+    {% if project %}
+    <!-- if -->
+
+    <div class="article-in-detail">
+      <!--  -->
+      <div class="article-intro has-text-centered">
+        <p class="title has-text-warning">{{ project.project_name }}</p>
+        <p class="has-text-light">
+          click link <i class="bi bi-arrow-right-short"></i>
+          <a
+            href="{{ project.project_url }}"
+            class="subtitle has-text-info is-size-5"
+          >
+            {{ project.project_url }}
+          </a>
+        </p>
+      </div>
+
+      <!-- section -->
+      <hr class="divider-separator" />
+      <!-- section -->
+
+      <div class="article-content card">
+        <div class="card-image">
+          <figure class="image is-2by1">
+            <img
+              src="{{ project.image_context.url }}"
+              alt="{{ project.project_name }}"
+            />
+          </figure>
+        </div>
+        <div class="card-content">
+          <!-- section -->
+          <hr class="divider-separator" />
+          <!-- section -->
+
+          <p class="subtitle has-text-weight-semibold">
+            My role in the project: {{ project.role_in_project }}
+          </p>
+
+          <!-- section -->
+          <hr class="divider-separator" />
+          <!-- section -->
+        </div>
+      </div>
+
+      <!-- if -->
+      {% if project.comments.all %}
+      <!-- if -->
+
+      <!-- section -->
+      <hr class="divider-separator" />
+      <!-- section -->
+
+      <p
+        class="title has-text-warning has-text-centered is-align-self-center"
+        id="about-section"
+      >
+        Kind words
+      </p>
+
+      <!-- section -->
+      <hr class="divider-separator" />
+      <!-- section -->
+
+      <div class="comments-contanier">
+        <!-- for -->
+        {% for comment in project.comments.all %}
+        <!-- for -->
+        <div class="kind-words message is-dark">
+          <div class="message-body">
+            <p class="is-size-5">"{{ comment.comments }}"</p>
+            <br />
+            <p><i class="bi bi-arrow-right-short"></i> {{ comment.person }}</p>
+            <p>
+              <i class="bi bi-arrow-right-short"></i> {{ comment.description }}
+            </p>
+          </div>
+        </div>
+        <!-- endfor -->
+        {% endfor %}
+        <!-- endfor -->
+      </div>
+
+      <!-- else -->
+      {% else %}
+      <!-- else -->
+
+      <!-- section -->
+      <hr class="divider-separator" />
+      <!-- section -->
+
+      <div class="to-github">
+        <a
+          href="{{ project.github_url }}"
+          class="button is-primary has-text-black"
+          >View on GitHub__ <i class="bi bi-github"></i
+        ></a>
+      </div>
+
+      <!-- endif -->
+      {% endif %}
+      <!-- endif -->
+
+      <!--  -->
+    </div>
+
+    <!-- else -->
+    {% else %}
+    <!-- else -->
+
+    <p class="title has-text-light has-text-centered">Something went wrong!</p>
+
+    <!-- endif -->
+    {% endif %}
+    <!-- endif -->
+
+    <!--  -->
+  </div>
+  <!--  -->
+</div>
+<!--  -->
+{% endblock %}
+<!-- extend body block -->
+
+<!-- body -->

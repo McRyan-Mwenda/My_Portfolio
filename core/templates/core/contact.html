@@ -1,0 +1,95 @@
+<!-- inherit template -->
+{% extends 'base.html' %}
+<!-- inherit template -->
+
+<!-- load static -->
+{% load static %}
+<!-- load static -->
+
+<!-- title -->
+
+<!-- extend title block -->
+{% block title %} Contact {% endblock %}
+<!-- extend title block -->
+
+<!-- title -->
+
+<!-- body -->
+
+<!-- extend body block -->
+{% block body %}
+<!--  -->
+<div class="parent container is-fluid">
+  <div class="contact-container">
+    <div class="contact-intro">
+      <p class="title has-text-danger is-size-1">Let's connect</p>
+      <p class="has-text-light is-size-4">
+        I'd love to hear from you; whether you want to learn more about my
+        services, want to collaborate on a project, or simply just want to say
+        hello.
+        <br />
+        You can fill out the form on the right or get in touch with me at
+        <span class="has-text-info is-uderlined"> mcryanmwenda.k@gmail.com </span
+        >.
+      </p>
+    </div>
+    <div class="contact-form">
+      <form action="." method="post" class="box">
+        <!-- csrf token -->
+        {% csrf_token %}
+        <!-- csrf token -->
+        <div class="field">
+          <label for="name" class="label">Name</label>
+          <div class="control">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="input"
+              placeholder="e.g. John Doe"
+              required
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label for="email" class="label">Email</label>
+          <div class="control">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="input"
+              placeholder="e.g. example@gmail.com"
+              required
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label for="message" class="label">Message</label>
+          <div class="control">
+            <textarea
+              name="message"
+              id="message"
+              class="textarea"
+              placeholder="your message here..."
+              required
+            ></textarea>
+          </div>
+        </div>
+        <br />
+        <div class="field">
+          <div class="control btn-ctrl">
+            <button type="submit" class="has-text-dark button is-success">
+              Connect with Mac'Ryan
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!--  -->
+{% endblock %}
+<!-- extend body block -->
+
+<!-- body -->

@@ -1,0 +1,299 @@
+/* Bulma css framework cdn */
+
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+/* Bulma css framework cdn */
+
+/* Google fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500&family=Caveat&family=Pacifico&display=swap");
+
+/* 
+font-family: 'Arima Madurai', cursive;
+font-family: 'Caveat', cursive;
+font-family: 'Pacifico', cursive;
+*/
+
+/* Google fonts */
+
+/* color pallets */
+
+/* 
+background => darkslategrey
+text => antiquewhite
+*/
+
+/* color pallets */
+
+/* custom styles */
+
+body,
+html {
+  font-family: "Arima Madurai", cursive !important;
+  /* background-color: darkslategrey !important; */
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23220000' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23440000' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23660000' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23880000' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23A00' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  color: antiquewhite !important;
+  scroll-behavior: smooth !important;
+}
+
+.logo {
+  font-family: "Pacifico", cursive !important;
+}
+
+.nav-body,
+.footer-body {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.main-body {
+  min-height: 100vh !important;
+}
+
+.nav-links,
+.footer-body {
+  font-family: "Caveat", cursive !important;
+  font-size: x-large !important;
+}
+
+.links:hover {
+  text-decoration: underline !important;
+}
+
+.divider-top {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  background-color: lightgray !important;
+}
+
+.divider-bottom {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  background-color: lightgray !important;
+}
+
+.normal-font {
+  font-family: "Arima Madurai", cursive !important;
+}
+
+.intro,
+.about-intro,
+.contact-container {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+}
+
+.intro-caption,
+.about-caption {
+  width: 40% !important;
+}
+
+.intro-image img,
+.about-image img {
+  border-radius: 0.5rem !important;
+}
+
+.recent-blog-container,
+.recent-podcast-container {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+}
+
+.divider-blank {
+  background-color: transparent !important;
+  margin: 0.5rem 0 !important;
+}
+
+.divider-separator {
+  background-color: lightgray !important;
+}
+
+.blog-podcast-container {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+}
+
+.about-container {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-evenly !important;
+}
+
+.me-personally,
+.my-skills,
+.education,
+.experience {
+  width: 50% !important;
+  margin: 0 1rem !important;
+}
+
+.experience,
+.education {
+  opacity: 0.8 !important;
+  transition-duration: 300ms;
+}
+
+.experience:hover,
+.education:hover {
+  opacity: 1 !important;
+}
+
+.kind-words,
+.all-comments {
+  opacity: 0.7 !important;
+}
+
+.contact-container {
+  margin-top: 6rem !important;
+}
+
+.contact-intro {
+  width: 50% !important;
+}
+
+.contact-form {
+  width: 40% !important;
+}
+
+.btn-ctrl {
+  width: fit-content !important;
+  margin: auto !important;
+}
+
+.app-message {
+  position: fixed !important;
+  top: 1rem !important;
+  right: 1rem !important;
+  width: fit-content !important;
+}
+
+.this-article-container,
+.articles-container,
+.testimonials-container {
+  width: 80% !important;
+  margin: auto !important;
+}
+
+.journey-container {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-around !important;
+}
+
+.small-gallery {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+.my-journey {
+  width: 50% !important;
+}
+
+.slider-container {
+  position: relative;
+  margin: auto;
+}
+
+.slider {
+  display: none;
+}
+
+.slider-container,
+.slider img {
+  width: 500px !important;
+  height: 500px !important;
+}
+
+.slide-animation {
+  animation: fadeIn 1s linear;
+}
+
+.is-active a:hover {
+  cursor: pointer !important;
+}
+
+.education,
+.experience {
+  border-radius: 0.5rem;
+}
+
+.article-content {
+  background-color: whitesmoke !important;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: row;
+  justify-content: first baseline;
+  flex-wrap: wrap;
+}
+
+.portfolio-card {
+  height: fit-content !important;
+  width: 325px !important;
+  margin: 1rem !important;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+  z-index: 99;
+}
+
+.portfolio-container {
+  max-height: 500px !important;
+  overflow-y: auto;
+}
+
+.portfolio-container::-webkit-scrollbar {
+  width: 7px;
+}
+
+.portfolio-container::-webkit-scrollbar-thumb {
+  background-color: whitesmoke;
+  border: 1px solid darkslategrey;
+  border-radius: 0.5rem;
+}
+
+.portfolio-container {
+  scrollbar-width: thin;
+  scrollbar-color: white darkgray;
+}
+
+.kind-words {
+  background-color: whitesmoke !important;
+}
+
+.to-github {
+  width: fit-content;
+  margin: auto;
+}
+
+.all-articles {
+  width: fit-content;
+  margin: auto;
+}
+
+.back-top {
+  position: fixed;
+  bottom: 4rem;
+  right: 1rem;
+}
+
+/* custom styles */
