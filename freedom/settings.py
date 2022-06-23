@@ -163,12 +163,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Email configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'mcryanmwenda@gmail.com'
-EMAIL_HOST_PASSWORD = 'Yvwimwenda321'
-RECIPIENT_ADDRESS = 'mcryanmwenda.k@gmail.com'
 
 # CK-EDITOR custom configs
 CKEDITOR_CONFIGS = {
@@ -182,8 +176,8 @@ CKEDITOR_UPLOAD_PATH = "articles/"
 
 # cloudinary configs
 cloudinary.config( 
-  cloud_name = "dvx3xe8vi", 
-  api_key = "227424478411124", 
-  api_secret = "c433vOC0qWnKQxtNCxN2HVTSh44",
+  cloud_name = os.environ.get('cloud_name'), 
+  api_key = os.environ.get('api_key'), 
+  api_secret = os.environ.get('api_secret'),
   secure = True
 )
